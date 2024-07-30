@@ -1,0 +1,18 @@
+#ifndef __CONFIG_H
+#define __CONFIG_H
+
+#define KERNEL_CODE_SELECTOR 0x08
+#define KERNEL_DATA_SELECTOR 0x10
+
+#define TOTAL_INTERRUPTS    512
+
+// 100MB heap size
+#define HEAP_SIZE_BYTES     104857600   // 0x06400000
+#define HEAP_BLOCK_SIZE     4096        // 0x1000
+#define HEAP_BLOCK_NUM      HEAP_SIZE_BYTES / HEAP_BLOCK_SIZE   // 0x6400
+#define HEAP_ADDRESS        0x01000000
+#define HEAP_TABLE_ADDRESS  0x00007e00
+
+#define SECTOR_SIZE         512
+
+#endif // __CONFIG_H
